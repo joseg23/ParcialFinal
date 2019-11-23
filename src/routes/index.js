@@ -15,13 +15,6 @@ router.post('/add', async (req, res, next) => {
   res.redirect('/');
 });
 
-router.get('/turn/:id', async (req, res, next) => {
-  let { id } = req.params;
-  const task = await Task.findById(id);
-  task.status = !task.status;
-  await task.save();
-  res.redirect('/');
-});
 
 
 router.get('/edit/:id', async (req, res, next) => {
