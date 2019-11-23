@@ -4,6 +4,9 @@ const morgan = require('morgan');
 const mongoose = require('mongoose');
 const debug = require('debug')('parcialfinal:database');
 
+require('dotenv').config();
+
+
 mongoose.connect(process.env.MONGO_URI, {
   useCreateIndex: true,
   useNewUrlParser: true,
